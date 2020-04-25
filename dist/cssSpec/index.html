@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端规范</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="前端规范">
+    <link rel="preload" href="/fontEndSpecification/assets/css/0.styles.b947200e.css" as="style"><link rel="preload" href="/fontEndSpecification/assets/js/app.a26166ab.js" as="script"><link rel="preload" href="/fontEndSpecification/assets/js/2.876d8e29.js" as="script"><link rel="preload" href="/fontEndSpecification/assets/js/6.e28d3b54.js" as="script"><link rel="prefetch" href="/fontEndSpecification/assets/js/10.14cc6107.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/3.a3b902b0.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/4.438ee997.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/5.8a004784.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/7.19bf52dc.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/8.04e4da4c.js"><link rel="prefetch" href="/fontEndSpecification/assets/js/9.b9c6dc3e.js">
+    <link rel="stylesheet" href="/fontEndSpecification/assets/css/0.styles.b947200e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fontEndSpecification/" class="home-link router-link-active"><!----> <span class="site-name">前端规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/fontEndSpecification/specification/" class="sidebar-link">基础规范</a></li><li><a href="/fontEndSpecification/htmlSpec/" class="sidebar-link">html编写规则</a></li><li><a href="/fontEndSpecification/cssSpec/" class="active sidebar-link">css编写规则</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fontEndSpecification/cssSpec/#css基本样式" class="sidebar-link">css基本样式</a></li><li class="sidebar-sub-header"><a href="/fontEndSpecification/cssSpec/#语法" class="sidebar-link">语法</a></li></ul></li><li><a href="/fontEndSpecification/javascriptSpec/" class="sidebar-link">javaScript编写规则</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="css基本样式"><a href="#css基本样式" class="header-anchor">#</a> css基本样式</h2> <div class="language-css extra-class"><pre class="language-css"><code>// 新浪重置页面样式的css
+<span class="token atrule"><span class="token rule">@charset</span> <span class="token string">'utf-8'</span><span class="token punctuation">;</span></span>
+<span class="token selector">html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0
+<span class="token punctuation">}</span>
+<span class="token selector">fieldset,img</span> <span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span>0
+<span class="token punctuation">}</span>
+<span class="token selector">img</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>block
+<span class="token punctuation">}</span>
+<span class="token selector">address,caption,cite,code,dfn,th,var</span> <span class="token punctuation">{</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span>normal<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span>normal
+<span class="token punctuation">}</span>
+<span class="token selector">ul,ol</span> <span class="token punctuation">{</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span>none
+<span class="token punctuation">}</span>
+<span class="token selector">input</span> <span class="token punctuation">{</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">padding-bottom</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">&quot;SimSun&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;宋体&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">input::-moz-focus-inner</span><span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0
+<span class="token punctuation">}</span>
+<span class="token selector">select,input</span><span class="token punctuation">{</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span>middle
+<span class="token punctuation">}</span>
+<span class="token selector">select,input,textarea</span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span>12px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span>0
+<span class="token punctuation">}</span>
+<span class="token selector">input[type=&quot;text&quot;],input[type=&quot;password&quot;],textarea</span><span class="token punctuation">{</span>
+    <span class="token property">outline-style</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span>
+    <span class="token property">-webkit-appearance</span><span class="token punctuation">:</span>none
+<span class="token punctuation">}</span>
+<span class="token selector">textarea</span><span class="token punctuation">{</span>
+    <span class="token property">resize</span><span class="token punctuation">:</span>none
+<span class="token punctuation">}</span>
+<span class="token selector">table</span><span class="token punctuation">{</span>
+b    <span class="token property">order-collapse</span><span class="token punctuation">:</span>collapse
+
+
+</code></pre></div><h2 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h2> <ul><li>使用组合选择器时，保持每个独立的选择器占用一行。</li> <li>为了代码的易读性，在每个声明的左括号前增加一个空格。</li> <li>声明块的右括号应该另起一行。</li> <li>每条声明 : 后应该插入一个空格。</li> <li>每条声明应该只占用一行来保证错误报告更加准确。</li> <li>所有声明应该以分号结尾。虽然最后一条声明后的分号是可选的，但是如果没有他，你的代码会更容易出错。</li> <li>逗号分隔的取值，都应该在逗号之后增加一个空格。比如说box-shadow</li> <li>不要在颜色值 rgb() rgba() hsl() hsla()和 rect() 中增加空格</li> <li>不要带有取值前面不必要的 0 (比如，使用 .5 替代 0.5)。</li> <li>所有的十六进制值都应该使用小写字母，例如 #fff。因为小写字母有更多样的外形，在浏览文档时，他们能够更轻松的被区分开来。</li> <li>为选择器中的属性取值添加引号，例如 input[type=&quot;text&quot;]。 他们只在某些情况下可有可无，所以都使用引号可以增加一致性。</li> <li>不要为 0 指明单位，比如使用 margin: 0; 而不是 margin: 0px;<div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* Bad CSS */</span>
+  <span class="token selector">.selector, .selector-secondary, .selector[type=text]</span> <span class="token punctuation">{</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+      <span class="token property">margin</span><span class="token punctuation">:</span> 0px 0px 15px<span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 2px #C0C0C0<span class="token punctuation">,</span> inset 0 1px 0 #F8F8F8
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/* Good CSS */</span>
+  <span class="token selector">.selector,
+  .selector-secondary,
+  .selector[type=&quot;text&quot;]</span> <span class="token punctuation">{</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 2px #c0c0c0<span class="token punctuation">,</span> inset 0 1px 0 #f8f8f8<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontEndSpecification/htmlSpec/" class="prev">
+        html编写规则
+      </a></span> <span class="next"><a href="/fontEndSpecification/javascriptSpec/">
+        javaScript编写规则
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fontEndSpecification/assets/js/app.a26166ab.js" defer></script><script src="/fontEndSpecification/assets/js/2.876d8e29.js" defer></script><script src="/fontEndSpecification/assets/js/6.e28d3b54.js" defer></script>
+  </body>
+</html>
