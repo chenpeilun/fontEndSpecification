@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-18 15:02:04
- * @LastEditTime: 2020-04-25 19:43:21
+ * @LastEditTime: 2020-04-25 21:28:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \frontEnd-specification\docs\.vuepress\config.js
@@ -40,10 +40,16 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1    // 可选的, 默认值是 1
       },
+      {
+        title: '工具方法',   // 必要的
+        path: '/tool/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 1    // 可选的, 默认值是 1
+      },
     ]
     
   },
-  sidebarDepth: 2,
+  sidebarDepth: 3,
   lastUpdated: 'Last Updated', 
 }
 

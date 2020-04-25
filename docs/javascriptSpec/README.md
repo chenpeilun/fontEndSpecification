@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-18 17:48:38
- * @LastEditTime: 2020-04-19 21:59:15
+ * @LastEditTime: 2020-04-25 21:11:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \frontEnd-specification\docs\javascriptSpec\README.md
@@ -22,6 +22,7 @@
 ## 代码编写(举例：列表页面)
 1. 每个模块需要一个模块逻辑文件，命名按照模块名称命名；一个服务js文件，按照模块名称+ Service命名
 2. 逻辑文件中必须有一个保存这个模块中变量的全局变量
+
    
   eg: xxx.js
   ```js
@@ -93,9 +94,77 @@
       }
     })()
   ```
+3. 功能代码必须分模块写，模块化编程，一个函数只完成一个功能，例如提交函数中不允许包含验证的逻辑，应该在重新一个验证逻辑应重新定义一个函数来进行逻辑编写，后面提交函数中进行调用即可
 
+```js
+ "use strict";    // 使用严格模式
+  //当前页面全局变量
+  var EPMLocalDomain = {};
+
+  $(document).ready(function () {
+
+    // 加载页面信息
+    loadPageInfo();
+
+  });
+  var loadPageInfo = function () {
+    //页面初始化
+    _init();
+    // 绑定页面按钮事件
+    _bindBtnEvent();
+  }
+    /**
+    * 页面初始化
+    * @private
+    */
+   function _init = function () {
+     
+   }
+
+   /**
+    * 绑定页面按钮事件
+    * @return {[type]} [description]
+    */
+   var _bindBtnEvent = function () {
+     $("#commit").on('click', function() {
+       // 提交方法
+       commit()
+     }) 
+   }
+
+    /**
+    * 提交按钮事件
+    * 
+    */
+   var commit = function() {
+     var isVerify = verify()
+     if (isVerify) {
+       // 提交逻辑
+     }
+   }
+
+  /**
+  * 验证方法
+  * 
+  */
+  var verify = function() {
+    //....
+
+    // return true
+    return false 
+  }
+```
 
 ## 注释
+  常用注释关键字
+| 注释名    | 语法      |  	含义    |  	含义  |
+| --------  |-----:   | :----:  |:----: |
+| @param     |@param 参数名 {参数类型} 描述信息      |   描述参数的信息    | @param name {String} 传入名称    |
+| @return     | @return {返回类型} 描述信息      |   描述返回值的信息	    | @return {Boolean} true:可执行;false:不可执行    |
+| @author     | @author 作者信息 [附属信息：如邮箱、日期]      |   描述此函数作者的信息	   | @author cpl 20200425    |
+| @version     | @version XX.XX.XX      |   描述此函数的版本号    | @version 1.0.0    |
+| @example     | @example 示例代码     |   @example setTitle('测试')    | 如下    |
+  
   ```js
   // 单行注释斜杠后面要留有一个空格
 
@@ -257,3 +326,38 @@
     with 非特殊业务， 禁用！！！
 
 
+## 设置默认参数
+```js
+
+ // 通常通过短路运算符||来进行
+ 
+  function multiply(a, b) {
+    // 如a是false 就把 1 的值赋予a。
+    a = a || 1;
+    b = b || 1;
+
+    log('Result ' + a * b);
+  }
+
+  multiply(); // Result 1
+  multiply(10); // Result 10
+  multiply(3, NaN); // Result 3
+  multiply(9, 5); // Result 45
+```
+
+## 三元条件判断（if 的快捷方法）
+```js
+// 注意：三元判断用于简单的情况下，不适合用在复杂的情况下
+// 代码也必须要具有可读性，没人愿意用6，7行的三元操作符把自己搞晕
+
+// bade
+if(x === 10) {
+  return 'valid';
+} else {
+  return 'invalid';
+}
+// good
+return x === 10 ? 'valid' : 'invalid'
+
+
+```
